@@ -36,7 +36,7 @@ This is a scalable and secure social networking application API built using Djan
   - Protection against common security vulnerabilities.
   
 - **Performance Optimization**
-  - Caching with Redis and Django’s optimization techniques.
+  - In-memory caching and Django’s optimization techniques.
 
 ## Technologies Used
 - **Backend**: Django, Django Rest Framework
