@@ -29,7 +29,7 @@ ENCRYPTION_KEY = Fernet.generate_key()
 SECRET_KEY = 'django-insecure-uo6@*6+d!mxlq6!u3co*p1_ykc@x!y6j4on1@wg*9wd07flu06'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["*"]
 
