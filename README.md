@@ -46,13 +46,31 @@ This is a scalable and secure social networking application API built using Djan
 - **Deployment**: Render
 - **Authentication**: JWT (JSON Web Tokens)
 
-## Installation Steps
-
 ### Prerequisites
 - Python 3.8 or higher
 - Docker and Docker Compose
 - PostgreSQL (for local development or You can also use [Railway](https://railway.app/)
 
+## Installation Step (Docker Hub)
+
+To get started, pull the Docker image from Docker Hub:
+
+```bash
+docker pull lesanabbas/social-media
+```
+Now, create a container using that image
+```bash
+docker run -p 8001:8001 \
+  -e POSTGRES_NAME=railway \
+  -e POSTGRES_USER=postgres \
+  -e POSTGRES_PASSWORD=uWWkxgLnAhWEwaRENPUFsrfnHOIlBJwg \
+  lesanabbas/social-media
+
+```
+
+
+
+## Installation Steps
 
 ### Step 1: Clone the Repository
 ```bash
@@ -94,23 +112,6 @@ docker exec -it <CONTAINER-NAME> python manage.py createsuperuser
 ### Step 6: Access the API
 
 The API will be accessible at http://localhost:8001/
-
-## Installation Step (Docker Hub)
-
-To get started, pull the Docker image from Docker Hub:
-
-```bash
-docker pull lesanabbas/social-media
-```
-Now, create a container using that image
-```bash
-docker run -p 8001:8001 \
-  -e POSTGRES_NAME=railway \
-  -e POSTGRES_USER=postgres \
-  -e POSTGRES_PASSWORD=uWWkxgLnAhWEwaRENPUFsrfnHOIlBJwg \
-  lesanabbas/social-media
-
-```
 
 
 ## API Documentation
