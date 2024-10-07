@@ -4,7 +4,6 @@ services:
 
   api:
     build:
-      image: social-media
       context: ./social_network/
       dockerfile: Dockerfile
     command: gunicorn social_network.wsgi:application --bind 0.0.0.0:8001 # for production
