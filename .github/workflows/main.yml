@@ -38,7 +38,7 @@ jobs:
       run: |
         docker-compose down
         docker images
-        docker tag social_network:latest ${{ secrets.DOCKER_USERNAME }}/social-media:latest
+        docker tag connectify_api:latest ${{ secrets.DOCKER_USERNAME }}/social-media:latest
         docker push ${{ secrets.DOCKER_USERNAME }}/social-media:latest
 
     - name: Logout from Docker Hub
