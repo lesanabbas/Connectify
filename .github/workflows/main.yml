@@ -34,8 +34,8 @@ jobs:
       run: |
         docker-compose up --build -d
         docker-compose down
-        docker tag social-media:latest ${{ secrets.DOCKER_USERNAME }}/social-media:latest
-        docker push ${{ secrets.DOCKER_USERNAME }}/social-media:latest
+        docker tag social-media ${{ secrets.DOCKER_USERNAME }}/social-media
+        docker push ${{ secrets.DOCKER_USERNAME }}/social-media
 
     - name: Logout from Docker Hub
       run: docker logout
