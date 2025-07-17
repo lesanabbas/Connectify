@@ -22,4 +22,4 @@ jobs:
       - name: Count lines of code in external repository
         run: |
           cd Connectify
-          cloc .
+          cloc . --json > cloc_output.json
