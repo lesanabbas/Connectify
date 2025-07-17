@@ -19,7 +19,10 @@ jobs:
       - name: Clone external repository
         run: git clone https://github.com/lesanabbas/Connectify.git
 
-      - name: Count lines of code in external repository
+      - name: Count lines of code in external repository and store output
         run: |
           cd Connectify
-          cloc . --json > cloc_output.json
+          cloc . --json > ../cloc_output.json  # This will store the output in the root folder
+
+      - name: List files to confirm output file is in root directory
+        run: ls -la  # This will list files and you should see 'cloc_output.json' in the root folder
