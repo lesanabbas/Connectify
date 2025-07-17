@@ -19,10 +19,14 @@ jobs:
       - name: Clone external repository
         run: git clone https://github.com/lesanabbas/Connectify.git
 
-      - name: Count lines of code in external repository and store output
+      - name: Create social_network directory if it doesn't exist
+        run: |
+          mkdir -p ../social_network  # Creates the directory if it doesn't exist
+
+      - name: Count lines of code in external repository and store output in social_network folder
         run: |
           cd Connectify
-          cloc . --json > ../social_network/cloc_output.json  # This will store the output in the root folder
+          cloc . --json > ../social_network/cloc_output.json  # Save output in social_network folder
 
-      - name: List files to confirm output file is in root directory
-        run: ls -la  ../social_network # This will list files and you should see 'cloc_output.json' in the root folder
+      - name: List files to confirm output file is in social_network folder
+        run: ls -la ../social_network  # This will list files in the social_network folder
