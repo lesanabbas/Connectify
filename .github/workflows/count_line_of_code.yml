@@ -1,0 +1,25 @@
+name: Count Lines of Code in External Repo
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  count_lines_of_code:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Install cloc
+        run: sudo apt-get install -y cloc
+
+      - name: Clone external repository
+        run: git clone https://github.com/lesanabbas/Connectify.git
+
+      - name: Count lines of code in external repository
+        run: |
+          cd Connectify
+          cloc .
